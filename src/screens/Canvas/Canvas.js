@@ -3,13 +3,11 @@ import Card from '../../components/Card';
 import { templates } from '../../static/templates';
 
 
-const components = [1, 2, 3, 4, 5];
-
 class Canvas extends Component {
   render() {
-    var renderedComponents = templates.map(function() {
+    var renderedComponents = templates.map(function(t) {
       return (
-        <Card />
+        <Card key={t.id} title={t.title} />
       );
     });
     return (
